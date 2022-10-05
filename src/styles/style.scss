@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: #D8D8D8;
+    background: #2A2C2F;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// ============ Bar ============
+
+.bar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #202225;
+
+    // .bar__icons
+    &__icons {
+        display: flex;
+        gap: 20px;
+    }
+
+    // .bar__icon
+    &__icon {}
+}
+
+.dropdown {
+    position: relative;
+
+    &:hover ul {
+        background-color: #333;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-25%, 0%);
+    }
+
+    // .dropdown ul
+    & ul {
+        transition: all 0.3s ease 0s;
+        padding: 10px;
+        top: calc(100% + 10px);
+        min-width: 200px;
+        background-color: #333;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transform: translate(-25%, 10%);
+    }
+
+    // .dropdown span
+    & span {
+        padding: 10px;
+    }
+
+    // .dropdown img
+    & img {
+        vertical-align: middle;
+        margin-left: 6px;
+        transform: scale(1.5);
+    }
+}
+
+// ============ Tools ============
+
+.tools {
+    background-color: #313438;
+    padding: 15px;
+    border-bottom: 2px solid rgba(32, 34, 37, 0.75);
+
+    // .tools__items
+    &__items {
+        display: flex;
+        gap: 50px;
+    }
+
+    // .tools__item
+    &__item {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid #FFFFFF;
+    }
+}
+
+// ============ Main ============
+
+.main {
+    font-size: 13px;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+
+    // .main__left
+    &__left {
+        background-color: #313438;
+        flex: 0 1 245px;
+    }
+
+    // .main__center
+    &__center {
+        flex-grow: 1;
+    }
+
+    // .main__right
+    &__right {
+        background-color: #313438;
+        flex: 0 1 270px;
+    }
+}
+
+.aside-main {
+
+    // .aside-main__header
+    &__header {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(32, 34, 37, 0.75);
+    }
+
+    // .aside-main__name
+    &__name {}
+}
+
+.dropdown div {
+    color: #636363;
+}
