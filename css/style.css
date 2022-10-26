@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -87,12 +89,12 @@ a {
   padding: 10px;
 }
 .dropdown ul li:hover {
-  background-color: #5c6b80;
+  background-color: #FF005A;
 }
 .dropdown span {
   padding: 10px;
 }
-.dropdown img {
+.dropdown > img {
   vertical-align: middle;
   margin-left: 6px;
   -webkit-transform: scale(1.5);
@@ -102,6 +104,92 @@ a {
 .dropdown div {
   color: #636363;
 }
+.dropdown a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+.dropdown__text {
+  color: white;
+}
+.dropdown__hover {
+  position: relative;
+}
+.dropdown__hover::before {
+  content: "";
+  position: absolute;
+  left: 130%;
+  top: 50%;
+  width: 6px;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.dropdown__hover::after {
+  content: "";
+  position: absolute;
+  left: calc(130% + 4px);
+  top: 50%;
+  width: 6px;
+  background-color: #fff;
+  height: 1px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.dropdown-menu {
+  position: relative;
+}
+.dropdown-menu:hover ul {
+  background-color: #333;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-25%, 0%);
+      -ms-transform: translate(-25%, 0%);
+          transform: translate(-25%, 0%);
+}
+.dropdown-menu ul {
+  z-index: 1;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  top: calc(100% + 10px);
+  left: 60px;
+  min-width: 200px;
+  background-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  -webkit-transform: translate(-25%, 10%);
+      -ms-transform: translate(-25%, 10%);
+          transform: translate(-25%, 10%);
+}
+.dropdown-menu ul > li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.dropdown-menu ul li {
+  padding: 10px;
+}
+.dropdown-menu ul li:hover {
+  background-color: #FF005A;
+}
+.dropdown-menu span {
+  padding: 10px;
+}
+.dropdown-menu img {
+  vertical-align: middle;
+  margin-left: 6px;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+}
+.dropdown-menu div {
+  color: #636363;
+}
 
 main .dropdown ul {
   top: 100%;
@@ -109,20 +197,69 @@ main .dropdown ul {
 
 .tools {
   background-color: #313438;
-  padding: 15px;
+  padding: 0px 15px;
   border-bottom: 2px solid rgba(32, 34, 37, 0.75);
 }
 .tools__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
+  gap: 8px;
 }
 .tools__item {
-  width: 20px;
-  height: 20px;
+  padding: 14px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tools__item:focus {
+  background-color: #fff;
+}
+.tools__item img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.tools__item:hover ul {
+  background-color: #333;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-25%, 0%);
+      -ms-transform: translate(-25%, 0%);
+          transform: translate(-25%, 0%);
+}
+.tools__more {
+  width: 5px;
+  height: 5px;
+  border: 1px solid #FFFFFF;
   border-radius: 50%;
-  border: 3px solid #FFFFFF;
+  position: relative;
+}
+.tools__more::after, .tools__more::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  width: 5px;
+  aspect-ratio: 1/1;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+}
+.tools__more::before {
+  left: -10px;
+}
+.tools__more::after {
+  left: 8px;
+}
+
+.active {
+  background-color: #FF005A;
 }
 
 .main {
@@ -154,7 +291,7 @@ main .dropdown ul {
 }
 
 .aside-main__header {
-  padding: 15px;
+  padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,4 +299,7 @@ main .dropdown ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 2px solid rgba(32, 34, 37, 0.75);
+}
+.aside-main__header > * {
+  padding: 10px;
 }
