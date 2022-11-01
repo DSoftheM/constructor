@@ -1,3 +1,4 @@
+import Dropdown from '../../Dropdown/Dropdown';
 import './Bar.scss';
 
 export default function Bar(): JSX.Element {
@@ -5,14 +6,15 @@ export default function Bar(): JSX.Element {
         <>
             <div className="bar">
                 <div className="bar__logo">App logo</div>
-                <div className="bar__project dropdown">
+                {/* <div className="bar__project dropdown">
                     <span>Project <img src="img/arrow.svg" /></span>
                     <ul>
                         <li><a href="#">Project Cat</a></li>
                         <li><a href="#">Project Dog</a></li>
                         <li><a href="#">Project Bird</a></li>
                     </ul>
-                </div>
+                </div> */}
+                <Dropdown pagesCount={3} title={'Project'} pages={['cat', 'dog', 'bird']} />
                 <div className="bar__icons">
                     <div className="bar__icon">-</div>
                     <div className="bar__icon">=</div>

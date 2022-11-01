@@ -1,16 +1,17 @@
 import { MouseEvent } from "react";
+import { DropdownState } from "../../../types/Dropdown.type";
 
 interface DropdownItemProps {
     title: string;
-    num: number;
-    handleClick: (num: number) => void;
+    handleClick: (page: string | number) => void;
+    page: string | number
 }
 
-export default function DropdownItem({ num, title, handleClick }: DropdownItemProps) {
+export default function DropdownItem({ title, handleClick, page }: DropdownItemProps) {
     return (
         <>
-            <li onClick={() => handleClick(num)}>
-                <a href="#1">{`${title} ${num}`}</a>
+            <li onClick={() => handleClick(page)}>
+                <a href="#1">{`${title} ${page}`}</a>
             </li>
         </>
     );
