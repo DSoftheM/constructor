@@ -1,0 +1,48 @@
+// ============ Main ============
+
+.main {
+    font-size: 13px;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+
+    // .main__left
+    &__left {
+
+        background-color: #313438;
+        flex: 0 1 245px;
+    }
+
+    header {
+        // background-color: #fff; test
+    }
+
+    // .main__center
+    &__center {
+        flex-grow: 1;
+    }
+
+    // .main__right
+    &__right {
+        background-color: #313438;
+        flex: 0 1 270px;
+    }
+}
+
+.aside-main {
+
+    // .aside-main__header
+    &__header {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(32, 34, 37, 0.75);
+    }
+
+    &__header>* {
+        padding: 10px;
+    }
+
+    // .aside-main__name
+    &__name {}
+}
