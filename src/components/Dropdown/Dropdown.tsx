@@ -30,6 +30,7 @@ export default function Dropdown({ title, pagesCount, pages }: DropdownProps) {
                                 title={title}
                                 handleClick={handleClick}
                                 page={page}
+                                isActive={page === activePage}
                             />
                         ) : Array(pagesCount)
                             .fill(null)
@@ -39,6 +40,7 @@ export default function Dropdown({ title, pagesCount, pages }: DropdownProps) {
                                     title={title}
                                     handleClick={handleClick}
                                     page={index + 1}
+                                    isActive={index + 1 === activePage}
                                 />
                             )
                     }
