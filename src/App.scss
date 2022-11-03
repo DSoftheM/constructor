@@ -73,6 +73,7 @@
 
     &__hover {
         position: relative;
+        margin-left: -8px;
     }
 
     &__hover::before {
@@ -195,6 +196,7 @@ main {
     // .tools__item
     &__item {
         padding: 14px;
+        flex-basis: 50px;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -206,6 +208,10 @@ main {
 
         img {
             transform: scale(1.1);
+        }
+
+        &:hover {
+            background-color: #202225;
         }
 
         &:hover ul {
