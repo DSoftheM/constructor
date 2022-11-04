@@ -22,7 +22,7 @@ export default function Dropdown({ title, pagesCount, pages, dropdownArrow = tru
     return (
         <>
             <div className="dropdown">
-                <div>
+                <div className="dropdown__img">
                     {selected}
                     {dropdownArrow && <img src={Icon.Arrow} alt="arrow down" />}
                 </div>
