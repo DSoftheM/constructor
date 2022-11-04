@@ -22,7 +22,10 @@ export default function Dropdown({ title, pagesCount, pages, dropdownArrow = tru
     return (
         <>
             <div className="dropdown">
-                {dropdownArrow && <div>{selected} <img src={Icon.Arrow} alt="arrow down" /></div>}
+                <div>
+                    {selected}
+                    {dropdownArrow && <img src={Icon.Arrow} alt="arrow down" />}
+                </div>
                 <ul>
                     {
                         pages ? pages.map((page, index) =>

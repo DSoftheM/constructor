@@ -1,15 +1,8 @@
+import { ITool } from "../../types/Tool.interface";
 import { IToolData } from "../../types/ToolData.interface";
 import { boxToolData } from "./toolsData/boxTool";
 import { dotsToolData } from "./toolsData/dotsTool";
 import { textToolData } from "./toolsData/textTool";
-
-export interface ITool {
-    id: number;
-    imgPath: string;
-    description: string;
-    isOnce: boolean;
-    toolData?: IToolData[];
-}
 
 export const toolsData: ITool[] = [
     {
@@ -43,6 +36,7 @@ export const toolsData: ITool[] = [
         imgPath: 'img/dots.svg',
         description: 'More',
         isOnce: false,
-        toolData: dotsToolData
+        toolData: dotsToolData,
+        dropdownArrow: false
     }
 ];

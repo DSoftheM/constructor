@@ -8,7 +8,7 @@ export default function Main(): JSX.Element {
                 <aside className="main__left aside-main">
                     <header className="aside-main__header">
                         <div className="aside-main__name">Слои</div>
-                        <Dropdown title='Страница' pagesCount={3} />
+                        <Dropdown title='Страница' pagesCount={3} dropdownArrow={true} />
                     </header>
                 </aside>
                 <section className="main__center">

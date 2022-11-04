@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ITool } from "../../../data/tools/tools";
+import { ITool } from "../../../types/Tool.interface";
 import ImgDropdown from "../../ImgDropdown/ImgDropdown";
 import OnceToolItem from "./ToolItem/OnceToolItem";
 import ToolItem from "./ToolItem/ToolItem";
@@ -18,7 +18,7 @@ export default function Tools({ tools }: ToolsProps) {
     return (
         <div className="tools">
             <ul className="tools__items">
-                {tools.map(({ isOnce, id, imgPath, toolData }: ITool) => {
+                {tools.map(({ isOnce, id, imgPath, toolData, dropdownArrow }: ITool) => {
                     if (isOnce) return (
                         <OnceToolItem
                             handleClickOnSubmenu={handleClickOnSubmenu}
@@ -33,7 +33,11 @@ export default function Tools({ tools }: ToolsProps) {
                             handleClickOnSubmenu={handleClickOnSubmenu}
                             id={id}
                         >
-                            <ImgDropdown titleImg={imgPath} toolData={toolData} />
+                            <ImgDropdown
+                                titleImg={imgPath}
+                                toolData={toolData}
+                                dropdownArrow={dropdownArrow}
+                            />
                         </ToolItem>
                     );
                 })}

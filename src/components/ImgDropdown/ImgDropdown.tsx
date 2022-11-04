@@ -5,9 +5,10 @@ import ImgDropdownItem from "./ImgDropdownItem/ImgDropdownItem";
 interface ImgDropdownProps {
     titleImg: string;
     toolData?: IToolData[];
+    dropdownArrow?: boolean;
 }
 
-export default function ImgDropdown({ titleImg, toolData }: ImgDropdownProps) {
+export default function ImgDropdown({ titleImg, toolData, dropdownArrow = true }: ImgDropdownProps) {
     const [activeTool, setActiveTool] = useState<number>(1);
 
     const handleClick = (id: number) => {
@@ -17,7 +18,7 @@ export default function ImgDropdown({ titleImg, toolData }: ImgDropdownProps) {
     return (
         <>
             <div className="dropdown">
-                <div className="dropdown__hover">
+                <div className={dropdownArrow ? 'dropdown__hover' : ''}>
                     <img src={titleImg} alt="titleImg" />
                 </div>
                 <ul>
