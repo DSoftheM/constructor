@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/constructor.git/static/css/main.7a2ffba9.css",
+    "main.js": "/constructor.git/static/js/main.a3b0b961.js",
+    "index.html": "/constructor.git/index.html",
+    "main.7a2ffba9.css.map": "/constructor.git/static/css/main.7a2ffba9.css.map",
+    "main.a3b0b961.js.map": "/constructor.git/static/js/main.a3b0b961.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a2ffba9.css",
+    "static/js/main.a3b0b961.js"
+  ]
+}
