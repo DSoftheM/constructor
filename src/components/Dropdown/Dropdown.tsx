@@ -1,5 +1,5 @@
 import { useState, MouseEvent } from 'react';
-import { Icons } from '../../enums/Icons';
+import { Icon } from '../../enums/Icons';
 import { DropdownState } from '../../types/Dropdown.type';
 import './Dropdown.scss';
 import DropdownItem from './DropdownItem/DropdownItem';
@@ -8,9 +8,10 @@ interface DropdownProps {
     title: string;
     pagesCount: number;
     pages?: string[];
+    dropdownArrow?: boolean
 }
 
-export default function Dropdown({ title, pagesCount, pages }: DropdownProps) {
+export default function Dropdown({ title, pagesCount, pages, dropdownArrow = true }: DropdownProps) {
     const [activePage, setActivePage] = useState<string | number>(pages ? pages[0] : 1);
     const selected: string = `${title} ${activePage}`;
 
@@ -21,7 +22,7 @@ export default function Dropdown({ title, pagesCount, pages }: DropdownProps) {
     return (
         <>
             <div className="dropdown">
-                <div>{selected} <img src={Icons.arrow} alt="arrow down" /></div>
+                {dropdownArrow && <div>{selected} <img src={Icon.Arrow} alt="arrow down" /></div>}
                 <ul>
                     {
                         pages ? pages.map((page, index) =>

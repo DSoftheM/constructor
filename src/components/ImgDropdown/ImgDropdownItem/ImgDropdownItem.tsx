@@ -1,6 +1,3 @@
-import { MouseEvent } from "react";
-import { DropdownState } from "../../../types/Dropdown.type";
-
 interface ImgDropdownItemProps {
     imgPath: string;
     handleClick: (id: number) => void;

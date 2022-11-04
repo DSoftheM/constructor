@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { ITool } from "../../data/tools/tools";
-import { textToolData } from "../../data/tools/toolsData/textTool";
-import { Icons } from "../../enums/Icons";
 import { IToolData } from "../../types/ToolData.interface";
 import ImgDropdownItem from "./ImgDropdownItem/ImgDropdownItem";
 

@@ -1,23 +1,24 @@
+import { Icon } from "../../../enums/Icons";
 import { IToolData } from "../../../types/ToolData.interface";
 
 interface IBoxToolData extends IToolData { }
 
-export const boxToolDropdownImg: string = 'img/box.svg';
+export const boxToolDropdownImg: string = Icon.Box;
 
 export const boxToolData: IBoxToolData[] = [
     {
         id: 1,
-        imgPath: './img/box.svg',
+        imgPath: Icon.Box,
         text: 'Секция'
     },
     {
         id: 2,
-        imgPath: './img/article.svg',
+        imgPath: Icon.Article,
         text: 'Статья'
     },
     {
         id: 3,
-        imgPath: './img/iframe.svg',
+        imgPath: Icon.Iframe,
         text: 'IFrame'
     }
 ];
