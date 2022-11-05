@@ -12,10 +12,11 @@ const toolsSlice = createSlice({
     initialState,
     name: 'toolsSlice',
     reducers: {
-        setActivePage(state: IToolsState, action: PayloadAction<number>) {
-            return;
+        setActiveTool(state: IToolsState, action: PayloadAction<number>) {
+            state.activePage = action.payload;
         }
     }
 });
 
 export const toolsReducer = toolsSlice.reducer;
+export const { setActiveTool } = toolsSlice.actions;

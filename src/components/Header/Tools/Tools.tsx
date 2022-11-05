@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks/hooks";
+import { setActiveTool } from "../../../redux/slices/toolsSlice";
 import { ITool } from "../../../types/Tool.interface";
 import ImgDropdown from "../../ImgDropdown/ImgDropdown";
 import OnceToolItem from "./ToolItem/OnceToolItem";
@@ -9,10 +11,11 @@ interface ToolsProps {
 }
 
 export default function Tools({ tools }: ToolsProps) {
-    const [activeTool, setActiveTool] = useState<number>(1);
+    const activeTool: number = useAppSelector((state) => state.toolsReducer.activePage);
+    const dispatch = useAppDispatch();
 
     const handleClickOnSubmenu = (id: number) => {
-        setActiveTool(id);
+        dispatch(setActiveTool(id));
     };
 
     return (
