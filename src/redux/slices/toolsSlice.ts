@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface IToolsState {
-    activePage: number;
+    activeTool: number;
 }
 
 const initialState: IToolsState = {
-    activePage: 1
+    activeTool: 1
 };
 
 const toolsSlice = createSlice({
@@ -13,7 +13,7 @@ const toolsSlice = createSlice({
     name: 'toolsSlice',
     reducers: {
         setActiveTool(state: IToolsState, action: PayloadAction<number>) {
-            state.activePage = action.payload;
+            state.activeTool = action.payload;
         }
     }
 });

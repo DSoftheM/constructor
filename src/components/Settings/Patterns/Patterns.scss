@@ -1,0 +1,28 @@
+.settings-item {
+    padding: 15px;
+    border-bottom: 2px solid rgba(32, 34, 37, 0.75);
+
+    // .settings-item__header
+    .settings-item__header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .settings-item__list
+    .settings-item__list {}
+
+    // .settings-item__li
+    .settings-item__li {
+        display: flex;
+
+        input {
+            width: 100px;
+        }
+
+        span {
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}

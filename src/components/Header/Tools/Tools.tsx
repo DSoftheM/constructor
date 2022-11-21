@@ -11,7 +11,7 @@ interface ToolsProps {
 }
 
 export default function Tools({ tools }: ToolsProps) {
-    const activeTool: number = useAppSelector((state) => state.toolsReducer.activePage);
+    const activeTool: number = useAppSelector((state) => state.toolsReducer.activeTool);
     const dispatch = useAppDispatch();
 
     const handleClickOnSubmenu = (id: number) => {
