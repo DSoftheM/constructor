@@ -1,6 +1,7 @@
 export enum Icon {
     Arrow = "img/arrow.svg",
     ArrowMenu = "img/arrow-menu.svg",
+    Miracle = "img/icon-left.svg",
     Article = "img/article.svg",
     Audio = "img/audio.svg",
     Box = "img/box.svg",

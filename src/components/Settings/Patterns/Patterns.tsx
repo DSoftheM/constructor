@@ -10,7 +10,7 @@ export default function Patterns({ title }: PatternsProps): JSX.Element {
             <section className='settings-item'>
                 <header className="settings-item__header">
                     <h3>{title}</h3>
-                    <img src="img/arrow.svg" alt="Open" />
+                    <img src="img/Upward.svg" alt="Open" />
                 </header>
                 <button>Добавить шаблон</button>
             </section>

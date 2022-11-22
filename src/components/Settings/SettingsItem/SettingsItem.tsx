@@ -8,7 +8,7 @@ export default function SettingsItem({ columns, count, title }: SettingsItemProp
         <section className={`settings-item ${columns ? 'columns' : ''}`}>
             <header className="settings-item__header">
                 <h3>{title}</h3>
-                <img src="img/arrow.svg" alt="Open" />
+                <img src="img/Upward.svg" alt="Open" />
             </header>
             <ul className="settings-item__list">
                 {Array(count).fill(null).map(item =>

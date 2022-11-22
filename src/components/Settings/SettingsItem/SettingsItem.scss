@@ -1,5 +1,5 @@
 .settings-item.columns {
-    padding: 15px;
+    padding: 17px;
     border-bottom: 2px solid rgba(32, 34, 37, 0.75);
 
     // .settings-item__header
@@ -10,19 +10,46 @@
     }
 
     // .settings-item__list
-    .settings-item__list {}
+    .settings-item__list {
+      margin-top: 30px;
+    }
 
     // .settings-item__li
     .settings-item__li {
         display: flex;
+        margin-bottom: 19px;
 
         input {
             width: 100px;
+            height: 21px;
+
+            background-color: #2D2F33;
+            border: 1px solid #575C66;
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 13px;
+            text-align: center;
+            color: #D8D8D8;
+
+            transition: border 0.2s ease-in-out;
+
+        }
+
+        input:focus {
+          border: 1px solid #FF005A;
+          outline: none;
         }
 
         span {
             flex-grow: 1;
             text-align: center;
         }
+    }
+
+    .settings-item__li:last-child {
+      margin-bottom: 0;
     }
 }

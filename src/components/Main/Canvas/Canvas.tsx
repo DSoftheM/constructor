@@ -17,7 +17,7 @@ export default function Canvas({ }: CanvasProps): JSX.Element {
         <section className="main__center">
             <div className="main__parent">
                 <div className="main__child">
-                    123
+
                 </div>
             </div>
         </section>

@@ -12,7 +12,9 @@ export default function AddInput({ title, count }: AddInputProps): JSX.Element {
             <ul className="add-input__list">
                 {Array(count).fill(null).map(item =>
                     <li className="add-input__li">
-                        <input type="text" placeholder="ввод" />
+                        <img src="img/icon-left.svg" alt="" />
+                        <input type="text" placeholder="new class" />
+                        <img src="img/Minus.svg" alt="" />
                     </li>
                 )}
             </ul>
