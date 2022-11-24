@@ -2,6 +2,7 @@ import Dropdown from '../Dropdown/Dropdown';
 import Settings from '../Settings/Settings';
 import Canvas from './Canvas/Canvas';
 import './Main.scss';
+import Tree from './Tree/Tree';
 
 export default function Main(): JSX.Element {
     return (
@@ -12,6 +13,9 @@ export default function Main(): JSX.Element {
                         <div className="aside-main__name">Слои</div>
                         <Dropdown title='Страница' pagesCount={3} dropdownArrow={true} />
                     </header>
+                    <div className="aside-main__tree">
+                        <Tree />
+                    </div>
                 </aside>
                 <Canvas />
                 <aside className="main__right">
