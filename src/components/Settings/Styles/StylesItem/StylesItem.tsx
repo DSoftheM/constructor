@@ -1,7 +1,9 @@
 import { ISettingsItem } from "../../../../types/SettingsItem.interface";
 import './StylesItem.scss';
 
-interface StylesItemProps extends ISettingsItem { }
+interface StylesItemProps extends ISettingsItem {
+    count: number;
+}
 
 export default function StylesItem({ title, count }: StylesItemProps): JSX.Element {
     return (

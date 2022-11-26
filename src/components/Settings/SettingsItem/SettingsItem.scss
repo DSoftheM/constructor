@@ -1,4 +1,4 @@
-.settings-item.columns {
+.settings-item {
     padding: 17px;
     border-bottom: 2px solid rgba(32, 34, 37, 0.75);
 
@@ -52,4 +52,12 @@
     .settings-item__li:last-child {
       margin-bottom: 0;
     }
+
+    img {
+      transition: all 0.3s ease 0s;
+    }
+}
+
+.rotated {
+  transform: rotate(180deg);
 }

@@ -1,7 +1,10 @@
 import { ISettingsItem } from "../../../types/SettingsItem.interface";
 import './AddInput.scss';
 
-interface AddInputProps extends ISettingsItem { }
+interface AddInputProps extends ISettingsItem {
+    count: number
+}
+
 
 export default function AddInput({ title, count }: AddInputProps): JSX.Element {
     return (

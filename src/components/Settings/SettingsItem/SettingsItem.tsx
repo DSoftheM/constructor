@@ -1,24 +1,25 @@
+import { ReactNode, useState } from "react";
 import { ISettingsItem } from "../../../types/SettingsItem.interface";
 import './SettingsItem.scss';
 
-interface SettingsItemProps extends ISettingsItem { }
+interface SettingsItemProps extends ISettingsItem {
+    children: ReactNode
+}
 
-export default function SettingsItem({ columns, count, title }: SettingsItemProps): JSX.Element {
+export default function SettingsItem({ title, children }: SettingsItemProps): JSX.Element {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = () => {
+        setIsOpen(prev => !prev);
+    };
+
     return (
-        <section className={`settings-item ${columns ? 'columns' : ''}`}>
+        <section className={`settings-item`}>
             <header className="settings-item__header">
                 <h3>{title}</h3>
-                <img src="img/Upward.svg" alt="Open" />
+                <img className={isOpen ? "rotated" : ""} src="img/Upward.svg" alt="Open" onClick={handleClick} />
             </header>
-            <ul className="settings-item__list">
-                {Array(count).fill(null).map(item =>
-                    <li className="settings-item__li">
-                        <input type="text" placeholder="ввод" />
-                        <span>:</span>
-                        <input type="text" placeholder="ввод" />
-                    </li>
-                )}
-            </ul>
+            {isOpen && children}
         </section>
     );
 }
