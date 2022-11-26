@@ -21,6 +21,12 @@ export default function Main(): JSX.Element {
                     </header>
                     <Settings />
                 </aside>
+                <aside className="">
+                    <header className="aside-main__header">
+                        <div className="aside-main__name">Слои</div>
+                        <Dropdown title='Страница' pagesCount={3} dropdownArrow={true} />
+                    </header>
+                </aside>
             </main>
 
         </>

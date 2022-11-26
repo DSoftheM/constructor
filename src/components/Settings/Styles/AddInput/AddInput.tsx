@@ -1,4 +1,4 @@
-import { ISettingsItem } from "../../../types/SettingsItem.interface";
+import { ISettingsItem } from "../../../../types/SettingsItem.interface";
 import './AddInput.scss';
 
 interface AddInputProps extends ISettingsItem { }
