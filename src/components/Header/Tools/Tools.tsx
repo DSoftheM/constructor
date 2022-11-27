@@ -26,12 +26,14 @@ export default function Tools({ tools }: ToolsProps) {
                         <OnceToolItem
                             handleClickOnSubmenu={handleClickOnSubmenu}
                             id={id}
+                            key={id}
                             imgPath={imgPath}
                             isActive={id === activeTool}
                         />
                     );
                     return (
                         <ToolItem
+                            key={id}
                             isActive={id === activeTool}
                             handleClickOnSubmenu={handleClickOnSubmenu}
                             id={id}

@@ -1,19 +1,22 @@
 import { MouseEvent } from "react";
 import { DropdownState } from "../../../types/Dropdown.type";
+import './DropdownItem.scss';
 
 interface DropdownItemProps {
-    title: string;
-    handleClick: (page: string | number) => void;
-    page: string | number;
+    handleClick: () => void;
+    text: string;
     isActive: boolean;
+    checkMark: boolean;
+    padding: number;
 }
 
-export default function DropdownItem({ title, handleClick, page, isActive }: DropdownItemProps) {
+export default function DropdownItem({ handleClick, text, isActive, checkMark, padding }: DropdownItemProps) {
+    const activeClass: string = `${checkMark ? 'active-check-mark' : 'active'}`;
 
     return (
         <>
-            <li className={isActive ? "active" : ""} onClick={() => handleClick(page)}>
-                <a href="#1">{`${title} ${page}`}</a>
+            <li className={isActive ? activeClass : ''} onClick={handleClick} style={{ padding: padding + 'px' }}>
+                <a href="#1">{text}</a>
             </li>
         </>
     );

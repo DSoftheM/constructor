@@ -1,10 +1,31 @@
 import { ISettingsItem } from "../../../../types/SettingsItem.interface";
+import Dropdown from "../../../Dropdown/Dropdown";
 import './Layout.scss';
 
 interface LayoutProps extends ISettingsItem {
   count: number;
   title: string;
 }
+
+const pages: string[] = [
+  'block',
+  'inline',
+  'block2',
+  'flex',
+  'flex2',
+  'grid',
+  'grid2',
+  'none',
+  'contents',
+  'table',
+  'row',
+  'item',
+  'inherit',
+  'initial',
+  'revert',
+  'layer',
+  'unset'
+];
 
 export default function Layout({ count, title }: LayoutProps): JSX.Element {
   return (
@@ -16,26 +37,8 @@ export default function Layout({ count, title }: LayoutProps): JSX.Element {
         </header>
         <div className="seldiv">
           <div className="display-div">
-            <label>display: </label>
-            <select id="selecttheme">
-              <option value="block">block</option>
-              <option value="inline">inline</option>
-              <option value="inline-block">inline-block</option>
-              <option value="flex">flex</option>
-              <option value="inline-flex">inline-flex</option>
-              <option value="grid">grid</option>
-              <option value="inline-grid">inline-grid</option>
-              <option value="none">none</option>
-              <option value="contents">contents</option>
-              <option value="table">table</option>
-              <option value="table-row">table-row</option>
-              <option value="list-item">list-item</option>
-              <option value="inherit">inherit</option>
-              <option value="initial">initial</option>
-              <option value="revert">revert</option>
-              <option value="revert-layer">revert-layer</option>
-              <option value="unset">unset</option>
-            </select>
+            <span>display: </span>
+            <Dropdown pagesCount={-1} title="" padding={5} checkMark pages={pages} />
           </div>
           <div className="border-margin">
             <div className="margin">margin</div>

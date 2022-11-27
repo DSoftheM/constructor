@@ -11,7 +11,7 @@ export default function Main(): JSX.Element {
                 <aside className="main__left aside-main">
                     <header className="aside-main__header">
                         <div className="aside-main__name">Слои</div>
-                        <Dropdown title='Страница' pagesCount={3} dropdownArrow={true} />
+                        <Dropdown title='Страница' pagesCount={3} dropdownArrow />
                     </header>
                     <div className="aside-main__tree">
                         <Tree />

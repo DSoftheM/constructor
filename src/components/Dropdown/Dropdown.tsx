@@ -8,10 +8,12 @@ interface DropdownProps {
     title: string;
     pagesCount: number;
     pages?: string[];
-    dropdownArrow?: boolean
+    dropdownArrow?: boolean;
+    checkMark?: boolean;
+    padding?: number;
 }
 
-export default function Dropdown({ title, pagesCount, pages, dropdownArrow = true }: DropdownProps) {
+export default function Dropdown({ title, pagesCount, pages, dropdownArrow = true, checkMark = false, padding = 10 }: DropdownProps) {
     const [activePage, setActivePage] = useState<string | number>(pages ? pages[0] : 1);
     const selected: string = `${title} ${activePage}`;
 
@@ -31,20 +33,22 @@ export default function Dropdown({ title, pagesCount, pages, dropdownArrow = tru
                         pages ? pages.map((page, index) =>
                             <DropdownItem
                                 key={index}
-                                title={title}
-                                handleClick={handleClick}
-                                page={page}
+                                handleClick={() => handleClick(page)}
                                 isActive={page === activePage}
+                                padding={padding}
+                                checkMark={checkMark}
+                                text={page}
                             />
                         ) : Array(pagesCount)
                             .fill(null)
                             .map((_, index) =>
                                 <DropdownItem
                                     key={index}
-                                    title={title}
-                                    handleClick={handleClick}
-                                    page={index + 1}
+                                    handleClick={() => handleClick(index + 1)}
+                                    text={title + " " + (index + 1)}
                                     isActive={index + 1 === activePage}
+                                    padding={padding}
+                                    checkMark={checkMark}
                                 />
                             )
                     }
