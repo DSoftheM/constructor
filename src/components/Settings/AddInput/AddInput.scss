@@ -3,16 +3,19 @@
     border-bottom: 2px solid rgba(32, 34, 37, 0.75);
 
     &__header {
-      margin-bottom: 30px;
+      margin-bottom: 16px;
     }
     // .add-input__list
     &__list {
+      margin-top: 30px;
     }
     // .add-input__li
     &__li {
       input{
-        width: 163px;
+        width: 134px;
         height: 33px;
+
+
         background: #2D2F33;
         border: none;
 
@@ -38,6 +41,9 @@
         vertical-align: middle;
       }
 
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
       background: #2D2F33;
       border: 1px solid #575C66;
       margin-bottom: 18px;

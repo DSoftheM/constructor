@@ -1,15 +1,18 @@
-import StylesItem from "./StylesItem/StylesItem";
+import Layout from "./Layout/Layout";
+import Text from "./Text/Text";
+import Decoration from "./Decoration/Decoration";
 
 interface StylesProps {
-    title: string
+  title: string
+  count: number
 }
 
-export default function Styles({ title }: StylesProps): JSX.Element {
+export default function Styles({ title, count }: StylesProps): JSX.Element {
     return (
         <>
-            {/* <StylesItem columns count={1} title='Макет' />
-            <StylesItem columns count={1} title='Текст'  />
-            <StylesItem columns count={1} title='Оформление' /> */}
+            <Layout  count={1} title='Макет' />
+            <Text  count={1} title='Текст'  />
+            <Decoration  count={1} title='Оформление' />
         </>
     );
 }

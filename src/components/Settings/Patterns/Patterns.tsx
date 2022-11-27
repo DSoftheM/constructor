@@ -1,19 +1,15 @@
 import { ISettingsItem } from "../../../types/SettingsItem.interface";
 import './Patterns.scss';
 
-interface PatternsProps extends ISettingsItem { }
+interface PatternsProps extends ISettingsItem {
+  count: number
+}
 
 
-export default function Patterns({ title }: PatternsProps): JSX.Element {
+export default function Patterns({ count }: PatternsProps): JSX.Element {
     return (
         <>
-            <section className='settings-item'>
-                <header className="settings-item__header">
-                    <h3>{title}</h3>
-                    <img src="img/Upward.svg" alt="Open" />
-                </header>
                 <button>Добавить шаблон</button>
-            </section>
         </>
     );
 }

@@ -1,0 +1,45 @@
+.seldiv-text {
+  height: 205px;
+}
+
+.seldiv-text ul li {
+  position: relative;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.seldiv-text ul li:nth-last-child(n+2) {
+  margin-bottom: 13px;
+}
+
+.name-input {
+  width: 73px;
+}
+
+.input-text {
+  position: relative;
+  width: 157px;
+  height: 21px;
+
+  margin-left: 78px;
+  padding-left: 11px;
+  padding-right: 11px;
+
+  background: #2D2F33;
+  border: none;
+  border-bottom: 1px solid #575C66;
+  box-sizing: border-box;
+
+  font-size: 11px;
+  line-height: 13px;
+  color: #D8D8D8;
+}
+
+.input-text:nth-last-child(n+2) {
+  margin-bottom: 5px;
+}
+
+.ul-input {
+  position: absolute;
+  margin-top: -3px;
+}

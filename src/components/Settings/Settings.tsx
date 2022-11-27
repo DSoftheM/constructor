@@ -15,16 +15,16 @@ export default function Settings({ }: SettingsProps): JSX.Element {
                 <Columns count={4} />
             </SettingsItem>
             <SettingsItem title='Стили'>
-
+                <Styles count={3} title={""} />
             </SettingsItem>
             <SettingsItem title='Классы'>
-
+                <AddInput count={3} title={""} />
             </SettingsItem>
             <SettingsItem title="ID's">
-
+                <AddInput count={1} title={""} />
             </SettingsItem>
             <SettingsItem title="Шаблоны">
-
+                <Patterns count={1} title={""} />
             </SettingsItem>
             {/* <Styles title='Стили' />
             <AddInput columns count={3} title='Классы' />
