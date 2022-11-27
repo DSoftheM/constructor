@@ -10,7 +10,7 @@ export default function Decoration({ count, title }: DecorationProps): JSX.Eleme
   return (
     <>
       <div className="line-block"></div>
-      <section className={`settings-item add-input padding-none`}>
+      <section className={`padding-none`}>
         <header className="add-input__header">
           <h3>{title}</h3>
         </header>

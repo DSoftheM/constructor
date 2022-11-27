@@ -1,5 +1,9 @@
+.new-line {
+  border-bottom: 2px solid rgba(32, 34, 37, 0.75);
+}
+
 .seldiv-text {
-  height: 205px;
+  height: 190px;
 }
 
 .seldiv-text ul li {
@@ -35,6 +39,11 @@
   color: #D8D8D8;
 }
 
+.input-text:focus-visible {
+  border-bottom: 1px solid #FF005A;
+  outline: none;
+}
+
 .input-text:nth-last-child(n+2) {
   margin-bottom: 5px;
 }
@@ -42,4 +51,9 @@
 .ul-input {
   position: absolute;
   margin-top: -3px;
+}
+
+.li-span {
+  display: flex;
+  gap: 10px;
 }

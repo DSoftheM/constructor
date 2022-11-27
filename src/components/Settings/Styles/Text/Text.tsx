@@ -1,4 +1,5 @@
 import { ISettingsItem } from "../../../../types/SettingsItem.interface";
+import Dropdown from "../../../Dropdown/Dropdown";
 import './Text.scss';
 
 interface TextProps extends ISettingsItem {
@@ -6,11 +7,39 @@ interface TextProps extends ISettingsItem {
   title: string;
 }
 
+
+const style: string[] = [
+  'normal',
+  'italic',
+];
+
+const stretch: string[] = [
+  'normal',
+  'semi condensed',
+  'condensed',
+  'extra-condensed',
+  'ultra-condensed',
+  'semi-expanded',
+  'extra-expanded',
+  'ultra-expanded',
+];
+
+const align: string[] = [
+  'initial',
+  'inherit',
+  'unset',
+  'left',
+  'right',
+  'center',
+  'start',
+  'end',
+  'justify',
+];
+
 export default function Text({ count, title }: TextProps): JSX.Element {
   return (
     <>
-      <div className="line-block"></div>
-      <section className={`settings-item add-input padding-none`}>
+      <section className={`new-line padding-none`}>
         <header className="add-input__header">
           <h3>{title}</h3>
         </header>
@@ -26,36 +55,23 @@ export default function Text({ count, title }: TextProps): JSX.Element {
             <li className="name-input">font-weight: </li>
             <li className="name-input">font-size: </li>
             <li className="name-input">font-height: </li>
-            <li>font-style:
-              <select id="selecttheme">
-                <option value="normal">normal</option>
-                <option value="italic">italic</option>
-              </select>
+            <li className="li-span">
+              <span>font-style: </span>
+              <div className="Dropdown_font-style">
+                <Dropdown pagesCount={-1} title="" padding={5} checkMark pages={style} />
+              </div>
             </li>
-            <li>font-stretch:
-              <select id="selecttheme">
-                <option value="normal">normal</option>
-                <option value="semi condensed">semi condensed</option>
-                <option value="condensed">condensed</option>
-                <option value="extra-condensed">extra-condensed</option>
-                <option value="ultra-condensed">ultra-condensed</option>
-                <option value="semi-expanded">semi-expanded</option>
-                <option value="extra-expanded">extra-expanded</option>
-                <option value="ultra-expanded">ultra-expanded</option>
-              </select>
+            <li className="li-span">
+              <span>font-stretch: </span>
+              <div className="Dropdown_font-style">
+                <Dropdown pagesCount={-1} title="" padding={5} checkMark pages={stretch} />
+              </div>
             </li>
-            <li>text-align:
-              <select id="selecttheme">
-                <option value="initial">initial</option>
-                <option value="inherit">inherit</option>
-                <option value="unset">unset</option>
-                <option value="left">left</option>
-                <option value="right">right</option>
-                <option value="center">center</option>
-                <option value="start">start</option>
-                <option value="end">end</option>
-                <option value="justify">justify</option>
-              </select>
+            <li className="li-span">
+              <span>font-align: </span>
+              <div className="Dropdown_font-style">
+                <Dropdown pagesCount={-1} title="" padding={5} checkMark pages={align} />
+              </div>
             </li>
           </ul>
         </div>

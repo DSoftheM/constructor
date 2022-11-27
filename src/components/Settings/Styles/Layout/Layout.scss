@@ -28,51 +28,101 @@
 }
 
 .meaning-margin-left {
-  position: absolute;
-  display: inline-block;
-  margin-top: 44px;
-  width: 20px;
-  border: none;
-  background: none;
-  text-align: center;
-  vertical-align: middle;
-  color: #D8D8D8;
+  margin-top: 45px;
 }
 
 .meaning-margin-up {
-  position: absolute;
-  display: inline-block;
   margin-top: 44px;
-  width: 20px;
-  border: none;
-  background: none;
-  text-align: center;
-  vertical-align: middle;
-  color: #D8D8D8;
+  top: -26%;
+  left: 46%;
 }
 
 .meaning-margin-right {
-  display: inline-block;
-  margin-top: 44px;
-  margin-right: 192px;
-  width: 20px;
-  border: none;
-  background: none;
-  text-align: center;
-  vertical-align: middle;
-  color: #D8D8D8;
+  margin-top: 45px;
+  top: 15%;
+  left: 91%;
 }
 
 .meaning-margin-down {
+  margin-top: 44px;
+  top: 59%;
+  right: 45%;
+}
+
+.meaning-margin {
   position: absolute;
   display: inline-block;
-  margin-top: 44px;
   width: 20px;
   border: none;
+  font-size: 10px;
+  line-height: 12px;
   background: none;
   text-align: center;
   vertical-align: middle;
-  color: #D8D8D8;
+  color:#575C66;
+  text-decoration: underline #575C66 solid;
+}
+
+.meaning-margin-down:focus-visible,
+.meaning-margin-right:focus-visible,
+.meaning-margin-up:focus-visible,
+.meaning-margin-left:focus-visible {
+  border-bottom: 1px solid #FF005A;
+  outline: none;
+}
+
+.meaning-border-left {
+  top: 43%;
+}
+
+.meaning-border-up {
+  top: 5%;
+  right: 44%;
+}
+
+.meaning-border-right {
+  top: 43%;
+  right: 0;
+}
+
+.meaning-border-down {
+  top: 85%;
+  right: 44%;
+}
+
+.meaning-border-down:focus-visible,
+.meaning-border-right:focus-visible,
+.meaning-border-up:focus-visible,
+.meaning-border-left:focus-visible {
+  border-bottom: 1px solid #FF005A;
+  outline: none;
+}
+
+.meaning-padding-left {
+  top: 38%;
+}
+
+.meaning-padding-up {
+  top: 8%;
+  right: 42%;
+}
+
+.meaning-padding-right {
+  top: 38%;
+  right: 0%;
+}
+
+.meaning-padding-down {
+  top: 75%;
+  right: 42%;
+}
+
+.meaning-padding-down:focus-visible,
+.meaning-padding-right:focus-visible,
+.meaning-padding-up:focus-visible,
+.meaning-padding-left:focus-visible {
+  border-bottom: 1px solid #FF005A;
+  outline: none;
 }
 
 .padding-none {
@@ -145,8 +195,12 @@
 .size-block {
   position: absolute;
   display: flex;
+  width: 103px;
+  height: 20px;
   font-size: 11px;
   line-height: 13px;
+  background: #2D2F33;
+  border: 1px solid #575C66;
   top: 0;
   right: 0;
   bottom: 0;
@@ -155,6 +209,40 @@
   align-content: flex-start;
   justify-content: center;
   align-items: center;
+}
+
+.size-left {
+  width: 30px;
+  background: #2D2F33;
+  border: none;
+  text-align: right;
+  vertical-align: middle;
+  font-size: 11px;
+  line-height: 13px;
+  color: #D8D8D8;
+  margin-right: 3px;
+}
+
+.size-left:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.size-right {
+  width: 30px;
+  background: #2D2F33;
+  border: none;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 11px;
+  line-height: 13px;
+  color: #D8D8D8;
+  margin-left: 3px;
+}
+
+.size-right:focus-visible {
+  border: none;
+  outline: none;
 }
 
 option span {

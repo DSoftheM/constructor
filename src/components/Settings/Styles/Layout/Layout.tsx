@@ -10,20 +10,20 @@ interface LayoutProps extends ISettingsItem {
 const pages: string[] = [
   'block',
   'inline',
-  'block2',
+  'inline-block',
   'flex',
-  'flex2',
+  'inline-flex',
   'grid',
-  'grid2',
+  'inline-grid',
   'none',
   'contents',
   'table',
-  'row',
-  'item',
+  'table-row',
+  'list-item',
   'inherit',
   'initial',
   'revert',
-  'layer',
+  'revert-layer',
   'unset'
 ];
 
@@ -42,16 +42,28 @@ export default function Layout({ count, title }: LayoutProps): JSX.Element {
           </div>
           <div className="border-margin">
             <div className="margin">margin</div>
-            <input className="meaning-margin-left" type="text" placeholder="0"></input>
-            <input className="meaning-margin-up" type="text" placeholder="0"></input>
-            <input className="meaning-margin-right" type="text" placeholder="0"></input>
-            <input className="meaning-margin-down" type="text" placeholder="0"></input>
+            <input className="meaning-margin-left meaning-margin" type="text" placeholder="0"></input>
+            <input className="meaning-margin-up meaning-margin" type="text" placeholder="0"></input>
+            <input className="meaning-margin-right meaning-margin" type="text" placeholder="0"></input>
+            <input className="meaning-margin-down meaning-margin" type="text" placeholder="0"></input>
             <div className="border-border">
               <div className="border">border</div>
+              <input className="meaning-border-left meaning-margin" type="text" placeholder="0"></input>
+              <input className="meaning-border-up meaning-margin" type="text" placeholder="0"></input>
+              <input className="meaning-border-right meaning-margin" type="text" placeholder="0"></input>
+              <input className="meaning-border-down meaning-margin" type="text" placeholder="0"></input>
               <div className="border-padding">
                 <div className="padding">padding</div>
+                <input className="meaning-padding-left meaning-margin" type="text" placeholder="0"></input>
+                <input className="meaning-padding-up meaning-margin" type="text" placeholder="0"></input>
+                <input className="meaning-padding-right meaning-margin" type="text" placeholder="0"></input>
+                <input className="meaning-padding-down meaning-margin" type="text" placeholder="0"></input>
                 <div className="border-size-block">
-                  <div className="size-block">size-block</div>
+                  <div className="size-block">
+                    <input className="size-left" type="text" placeholder="0"/>
+                    <span>×</span>
+                    <input className="size-right" type="text" placeholder="0"/>
+                  </div>
                 </div>
               </div>
             </div>

@@ -15,7 +15,7 @@
     position: relative;
 
     &:hover ul {
-        background-color: #333;
+        background-color: #202225;
         opacity: 1;
         visibility: visible;
         transform: translate(-25%, 0%);
@@ -27,7 +27,7 @@
         transition: all 0.3s ease 0s;
         top: calc(100% + 10px);
         min-width: 200px;
-        background-color: #333;
+        background-color: #202225;
         opacity: 0;
         visibility: hidden;
         position: absolute;
@@ -60,7 +60,7 @@
     }
 
     div {
-        color: #636363;
+        color: #D8D8D8;
     }
 
     a {
@@ -252,4 +252,4 @@ main {
     }
 }
 
-// ============ Test ============ 
+// ============ Test ============
