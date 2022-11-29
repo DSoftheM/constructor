@@ -61,7 +61,7 @@ export default function Layout({ count, title }: LayoutProps): JSX.Element {
                 <div className="border-size-block">
                   <div className="size-block">
                     <input className="size-left" type="text" placeholder="0"/>
-                    <span>×</span>
+                    <span className="span_size">×</span>
                     <input className="size-right" type="text" placeholder="0"/>
                   </div>
                 </div>
