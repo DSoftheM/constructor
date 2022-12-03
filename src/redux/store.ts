@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { toolsReducer } from "./slices/toolsSlice";
+import { toolsSlice } from "./slices/toolsSlice";
+import { treeSlice } from "./slices/treeSlice";
 
 const rootReducer = combineReducers({
-    toolsReducer
+    toolsReducer: toolsSlice.reducer,
+    treeReducer: treeSlice.reducer
 });
 
 export const store = configureStore({

@@ -31,4 +31,13 @@
             background-color: #575C66;
         }
     }
+
+    &__text {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            background-color: black;
+        }
+    }
 }
