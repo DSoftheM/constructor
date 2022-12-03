@@ -8,7 +8,7 @@ const initialState: IToolsState = {
     activeTool: 1
 };
 
-const toolsSlice = createSlice({
+export const toolsSlice = createSlice({
     initialState,
     name: 'toolsSlice',
     reducers: {
@@ -17,6 +17,3 @@ const toolsSlice = createSlice({
         }
     }
 });
-
-export const toolsReducer = toolsSlice.reducer;
-export const { setActiveTool } = toolsSlice.actions;

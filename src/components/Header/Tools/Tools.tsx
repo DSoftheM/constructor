@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks/hooks";
-import { setActiveTool } from "../../../redux/slices/toolsSlice";
+import { toolsSlice } from "../../../redux/slices/toolsSlice";
+import { store } from "../../../redux/store";
 import { ITool } from "../../../types/Tool.interface";
 import ImgDropdown from "../../ImgDropdown/ImgDropdown";
 import OnceToolItem from "./ToolItem/OnceToolItem";
@@ -15,7 +15,7 @@ export default function Tools({ tools }: ToolsProps) {
     const dispatch = useAppDispatch();
 
     const handleClickOnSubmenu = (id: number) => {
-        dispatch(setActiveTool(id));
+        dispatch(toolsSlice.actions.setActiveTool(id));
     };
 
     return (
