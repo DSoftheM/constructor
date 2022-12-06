@@ -2,6 +2,10 @@
   border-bottom: 2px solid rgba(32, 34, 37, 0.75);
 }
 
+.seldiv-text-dropdown ul li:nth-last-child(n+2) {
+  margin-bottom: 2px !important;
+}
+
 .seldiv-text {
   height: 190px;
 }

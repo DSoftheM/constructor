@@ -57,19 +57,19 @@ export default function Text({ count, title }: TextProps): JSX.Element {
             <li className="name-input">font-height: </li>
             <li className="li-span">
               <span>font-style: </span>
-              <div className="Dropdown_font-style">
+              <div className="Dropdown_font-style seldiv-text-dropdown">
                 <Dropdown pagesCount={-1} title="" padding={5} checkMark pages={style} />
               </div>
             </li>
             <li className="li-span">
               <span>font-stretch: </span>
-              <div className="Dropdown_font-style">
+              <div className="Dropdown_font-style seldiv-text-dropdown">
                 <Dropdown pagesCount={-1} title="" padding={5} checkMark pages={stretch} />
               </div>
             </li>
             <li className="li-span">
               <span>font-align: </span>
-              <div className="Dropdown_font-style">
+              <div className="Dropdown_font-style seldiv-text-dropdown">
                 <Dropdown pagesCount={-1} title="" padding={5} checkMark pages={align} />
               </div>
             </li>
