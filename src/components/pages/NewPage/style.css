@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: #D8D8D8;
+  background: #2A2C2F;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #202225;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown div {
+  color: #D8D8D8;
+}
+
+.bar__icons {
+  display: flex;
+  gap: 20px;
+}
+
+.bar__icon {
+  cursor: pointer;
+}
+
+.ul-projects {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 51px;
+  padding-top: 49px;
+}
+
+.projects {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.div-point {
+  width: 25px;
+  height: 25px;
+  margin-right: 23px;
+  display: flex;
+  background: #FF005A;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.div-project {
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.name-project {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-block {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  position: absolute;
+  width: 298px;
+  height: 55px;
+  top: 50%;
+  background: none;
+  color: #D8D8D8;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  border: 2px solid #FFFFFF;
+}
+
+.button::after {
+  content: '';
+  position: relative;
+  background: url('./img/plus.svg') no-repeat;
+  width: 16px;
+  height: 18px;
+  padding-left: 20px;
+  left: 14px;
+}
