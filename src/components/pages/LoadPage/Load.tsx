@@ -16,26 +16,26 @@ export default function Load({}: LoadProps): JSX.Element {
 					<div className="bar__icon">x</div>
 				</div>
 			</div>
-			<div className="main-block">
-				<div className="name_block">
-					<div className="name-project-block">
+			<div className="load-main-block">
+				<div className="load-name_block">
+					<div className="load-name-project-block">
 						Имя проекта:
-						<input className="input" type="text" placeholder="Введите" />
+						<input className="load-input" type="text" placeholder="Введите" />
 					</div>
-					<div className="uploading-project">Загрузите файлы прошлого проекта:</div>
-					<div className="Uploading-block">
+					<div className="load-uploading-project">Загрузите файлы прошлого проекта:</div>
+					<div className="load-Uploading-block">
 						<form action="/upload.php">
-							<img className="img-block" src="./img/down.svg" />
-							<div className="Uploading-text" id="dropZone">
+							<img className="load-img-block" src="./img/down.svg" />
+							<div className="load-Uploading-text" id="dropZone">
 								Перетащите сюда файлы
 							</div>
 						</form>
 					</div>
-					<div className="server-block">
-						<div className="server-text">Загрузить с сервера</div>
+					<div className="load-server-block">
+						<div className="load-server-text">Загрузить с сервера</div>
 					</div>
-					<div className="create-block">
-						<div className="create-text">Создать</div>
+					<div className="load-create-block">
+						<div className="load-create-text">Создать</div>
 					</div>
 				</div>
 			</div>

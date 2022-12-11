@@ -17,9 +17,9 @@ root.render(
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<App />} />
-					{/* <Route path="/new" element={<New />} />
+					<Route path="/new" element={<New />} />
 					<Route path="/load" element={<Load />} />
-					<Route path="/open" element={<Open />} /> */}
+					<Route path="/open" element={<Open />} />
 				</Routes>
 			</BrowserRouter>
 		</ReduxProvider>

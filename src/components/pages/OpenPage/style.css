@@ -18,45 +18,14 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.bar {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #202225;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown div {
-  color: #D8D8D8;
-}
-
-.bar__icons {
-  display: flex;
-  gap: 20px;
-}
-
-.bar__icon {
-  cursor: pointer;
-}
-
-.main-block {
+.open-main-block {
   min-width: 716px;
   min-height: 612px;
   background: #313438;
   margin: auto;
 }
 
-.padding-block {
+.open-padding-block {
   margin-left: 68px;
   margin-top: 58px;
 }
@@ -76,20 +45,26 @@ body {
   color: #D8D8D8;
 }
 
-ul {
+.open-ul {
   list-style-type: none;
   margin-top: 40px;
 }
 
-li {
+.open-li {
   padding-left: 68px;
+  cursor: pointer;
 }
 
-li:nth-last-child(n+2) {
+.open-li:hover {
+  background-color: #FF005A;
+  transition: all .3s ease-in-out;
+}
+
+.open-li:nth-last-child(n+2) {
   margin-bottom: 14px;
 }
 
-li::before {
+.open-li::before {
   content: '';
   position: relative;
   background: url('./img/file.svg') no-repeat;
@@ -97,7 +72,16 @@ li::before {
   left: 0px;
 }
 
-.button_ok {
+.open-li:hover::before {
+  content: '';
+  position: relative;
+  background: url('./img/ActFile.svg') no-repeat;
+  padding-left: 35px;
+  left: 0px;
+  transition: all .3s ease-in-out;
+}
+
+.open-button_ok {
   width: 121px;
   height: 35px;
   position: absolute;
@@ -109,9 +93,10 @@ li::before {
   color: #D8D8D8;
   font-size: 16px;
   line-height: 20px;
+  cursor: pointer;
 }
 
-.button_cancel {
+.open-button_cancel {
   width: 121px;
   height: 35px;
   border: none;
@@ -123,4 +108,5 @@ li::before {
   margin-bottom: 58px;
   font-size: 16px;
   line-height: 20px;
+  cursor: pointer;
 }

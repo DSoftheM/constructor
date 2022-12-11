@@ -18,38 +18,7 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.bar {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #202225;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown div {
-  color: #D8D8D8;
-}
-
-.bar__icons {
-  display: flex;
-  gap: 20px;
-}
-
-.bar__icon {
-  cursor: pointer;
-}
-
-.main-block {
+.load-main-block {
   width: 517px;
   height: 594px;
   background: #313438;
@@ -60,7 +29,7 @@ body {
   margin: auto;
 }
 
-.input {
+.load-input {
   width: 190px;
   height: 29px;
   background: #2D2F33;
@@ -76,11 +45,11 @@ body {
   color: #D8D8D8;
 }
 
-.name-project-block {
+.load-name-project-block {
   margin-bottom: 25px;
 }
 
-.uploading-project {
+.load-uploading-project {
   margin-bottom: 28px;
 }
 
@@ -92,17 +61,17 @@ form {
   border-bottom: 2px solid #575C66;
 }
 
-.Uploading-block {
+.load-Uploading-block {
   margin-bottom: 32px;
 }
 
-.img-block {
+.load-img-block {
   position: absolute;
   margin-left: 153px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
-.Uploading-text {
+.load-Uploading-text {
   position: absolute;
   font-size: 12px;
   line-height: 15px;
@@ -111,7 +80,7 @@ form {
   margin-left: 76px;
 }
 
-.server-block {
+.load-server-block {
   width: 238px;
   height: 47px;
   border: 2px solid #FFFFFF;
@@ -123,12 +92,12 @@ form {
   cursor: pointer;
 }
 
-.server-text {
+.load-server-text {
   font-size: 16px;
   line-height: 20px;
 }
 
-.create-block {
+.load-create-block {
   width: 238px;
   height: 47px;
   background: #FF005A;
@@ -140,7 +109,7 @@ form {
   cursor: pointer;
 }
 
-.create-text {
+.load-create-text {
   font-size: 16px;
   line-height: 20px;
 }

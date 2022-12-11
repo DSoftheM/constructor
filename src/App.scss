@@ -19,10 +19,13 @@
         opacity: 1;
         visibility: visible;
         transform: translate(-25%, 0%);
+        display: block;
     }
 
     // .dropdown ul
     ul {
+        display: none;
+        overflow: auto;
         z-index: 1;
         transition: all 0.3s ease 0s;
         top: calc(100% + 10px);
@@ -32,6 +35,9 @@
         visibility: hidden;
         position: absolute;
         transform: translate(-25%, 10%);
+/*         pointer-events: none; */
+
+
 
 /*         &>li:not(:last-child) {
             margin-bottom: 10px;

@@ -18,25 +18,25 @@ export default function New({}: NewProps): JSX.Element {
 							<div className="bar__icon">x</div>
 						</div>
 					</div>
-					<ul className="ul-projects">
-						<h3 className="projects">Ваши проекты:</h3>
-						<li className="name-project">
-							<div className="div-point">P1</div>
-							<div className="div-project">Project1</div>
+					<ul className="new-ul-projects">
+						<h3 className="new-projects">Ваши проекты:</h3>
+						<li className="new-name-project">
+							<div className="new-div-point">P1</div>
+							<div className="new-div-project">Project1</div>
 						</li>
-						<li className="name-project">
-							<div className="div-point">P2</div>
-							<div className="div-project">Project2</div>
+						<li className="new-name-project">
+							<div className="new-div-point">P2</div>
+							<div className="new-div-project">Project2</div>
 						</li>
-						<li className="name-project">
-							<div className="div-point">P3</div>
-							<div className="div-project">Project3</div>
+						<li className="new-name-project">
+							<div className="new-div-point">P3</div>
+							<div className="new-div-project">Project3</div>
 						</li>
 					</ul>
 				</div>
-				<div className="new-button">
-					<div className="button-block">
-						<button className="button">Создать новый проект</button>
+				<div className="new-new-button">
+					<div className="new-button-block">
+						<button className="new-button">Создать новый проект</button>
 					</div>
 				</div>
 			</div>

@@ -3,9 +3,9 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,45 +16,14 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.bar {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #202225;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown div {
-  color: #D8D8D8;
-}
-
-.bar__icons {
-  display: flex;
-  gap: 20px;
-}
-
-.bar__icon {
-  cursor: pointer;
-}
-
-.ul-projects {
+.new-ul-projects {
   list-style-type: none;
   margin: 0;
   padding-left: 51px;
   padding-top: 49px;
 }
 
-.projects {
+.new-projects {
   margin: 0;
   margin-bottom: 20px;
 
@@ -62,7 +31,7 @@ body {
   line-height: 24px;
 }
 
-.div-point {
+.new-div-point {
   width: 25px;
   height: 25px;
   margin-right: 23px;
@@ -75,26 +44,27 @@ body {
   line-height: 17px;
 }
 
-.div-project {
+.new-div-project {
   font-size: 16px;
   line-height: 20px;
   cursor: pointer;
 }
 
-.name-project {
+.new-name-project {
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+  padding: 0;
   display: flex;
   justify-content: flex-start;
 }
 
-.button-block {
+.new-button-block {
   display: flex;
   justify-content: center;
 }
 
-.button {
+.new-button {
   position: absolute;
   width: 298px;
   height: 55px;
@@ -107,7 +77,7 @@ body {
   border: 2px solid #FFFFFF;
 }
 
-.button::after {
+.new-button::after {
   content: '';
   position: relative;
   background: url('./img/plus.svg') no-repeat;

@@ -16,18 +16,18 @@ export default function Open({}: OpenProps): JSX.Element {
 					<div className="bar__icon">x</div>
 				</div>
 			</div>
-			<div className="main-block">
-				<div className="padding-block">
+			<div className="open-main-block">
+				<div className="open-padding-block">
 					<div className="open_text-block">Откройте файл проекта для загрузки с сервера</div>
 					<input type="text" className="open-input" placeholder="Введите" />
 				</div>
-				<ul>
-					<li>Файл</li>
-					<li>Файл</li>
-					<li>Файл</li>
+				<ul className="open-ul">
+					<li className="open-li">Файл</li>
+					<li className="open-li">Файл</li>
+					<li className="open-li">Файл</li>
 				</ul>
-				<button className="button_ok">ОК</button>
-				<button className="button_cancel">Отмена</button>
+				<button className="open-button_ok">ОК</button>
+				<button className="open-button_cancel">Отмена</button>
 			</div>
 		</div>
 	);

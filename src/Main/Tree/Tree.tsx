@@ -1,5 +1,4 @@
 import { rootNode } from "../../db/Tree";
-import { settingApi, useLazyGetSettingsQuery } from "../../redux/api/settings.api";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
 import { treeSlice } from "../../redux/slices/treeSlice";
 import { INode } from "../../types/Node.interface";
@@ -32,5 +31,5 @@ export default function Tree({}: TreeProps): JSX.Element {
 		dispatch(treeSlice.actions.setActiveTreeItemId(nodeID));
 	};
 
-	// return <ul className="tree">{renderNode(rootNode)}</ul>;
+	return <ul className="tree">{renderNode(rootNode)}</ul>;
 }
