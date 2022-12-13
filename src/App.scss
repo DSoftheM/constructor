@@ -15,27 +15,25 @@
     position: relative;
 
     &:hover ul {
-        background-color: #202225;
         opacity: 1;
         visibility: visible;
         transform: translate(-25%, 0%);
+        pointer-events: all;
     }
 
     // .dropdown ul
     ul {
+        padding-top: 10px;
+        pointer-events: none;
         z-index: 1;
         transition: all 0.3s ease 0s;
-        top: calc(100% + 10px);
+        top: 100%;
         min-width: 200px;
         background-color: #202225;
         opacity: 0;
         visibility: hidden;
         position: absolute;
         transform: translate(-25%, 10%);
-
-/*         &>li:not(:last-child) {
-            margin-bottom: 10px;
-        } */
 
         li {
             padding: 10px;

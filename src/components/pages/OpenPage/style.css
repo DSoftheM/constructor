@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #D8D8D8;
+  background: #2A2C2F;
+  margin: 0;
+}
+
+.open-main-block {
+  min-width: 716px;
+  min-height: 612px;
+  background: #313438;
+  margin: auto;
+}
+
+.open-padding-block {
+  margin-left: 68px;
+  margin-top: 58px;
+}
+
+.open-input {
+  width: 580px;
+  height: 29px;
+  background: #2D2F33;
+  border: none;
+  border-bottom: 2px solid #575C66;
+  margin-top: 16px;
+  padding-left: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #D8D8D8;
+}
+
+.open-ul {
+  list-style-type: none;
+  margin-top: 40px;
+}
+
+.open-li {
+  padding-left: 68px;
+  cursor: pointer;
+}
+
+.open-li:hover {
+  background-color: #FF005A;
+  transition: all .3s ease-in-out;
+}
+
+.open-li:nth-last-child(n+2) {
+  margin-bottom: 14px;
+}
+
+.open-li::before {
+  content: '';
+  position: relative;
+  background: url('./img/file.svg') no-repeat;
+  padding-left: 35px;
+  left: 0px;
+}
+
+.open-li:hover::before {
+  content: '';
+  position: relative;
+  background: url('./img/ActFile.svg') no-repeat;
+  padding-left: 35px;
+  left: 0px;
+  transition: all .3s ease-in-out;
+}
+
+.open-button_ok {
+  width: 121px;
+  height: 35px;
+  position: absolute;
+  margin-left: 368px;
+  margin-top: 245px;
+  margin-bottom: 58px;
+  border: none;
+  background: #FF005A;
+  color: #D8D8D8;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.open-button_cancel {
+  width: 121px;
+  height: 35px;
+  border: none;
+  background: none;
+  border: 2px solid #FFFFFF;
+  color: #D8D8D8;
+  margin-left: 527px;
+  margin-top: 245px;
+  margin-bottom: 58px;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
