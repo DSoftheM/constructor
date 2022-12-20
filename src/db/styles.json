@@ -1,0 +1,31 @@
+{
+	"styles": [
+		{
+			"nodeID": "testUID1",
+			"tag": "div",
+			"classList": ["test1", "test2"],
+			"idList": ["testID1", "testID2"],
+			"attributes": {}
+		},
+		{
+			"nodeID": "testUID2",
+			"tag": "a",
+			"classList": ["link1"],
+			"idList": [],
+			"attributes": {
+				"href": "google.com"
+			}
+		},
+		{
+			"nodeID": "testUID3",
+			"tag": "button",
+			"classList": ["colored-btn"],
+			"idList": ["send-button"],
+			"attributes": {}
+		},
+		{
+			"nodeID": "testUID4",
+			"content": "Что-то на татарском"
+		}
+	]
+}
