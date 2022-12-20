@@ -1,21 +1,23 @@
 import { ISettingsItem } from "../../../types/SettingsItem.interface";
-import './AddInput.scss';
+import "./AddInput.scss";
 
 interface AddInputProps extends ISettingsItem {
-    count: number
+	classes: string[];
 }
 
-
-export default function AddInput({ count }: AddInputProps): JSX.Element {
-    return (
-            <ul className="add-input__list">
-                {Array(count).fill(null).map(item =>
-                    <li className="add-input__li">
-                        <img src="img/icon-left.svg" alt="" />
-                        <input type="text" placeholder="new class" />
-                        <img src="img/Minus.svg" alt="" />
-                    </li>
-                )}
-            </ul>
-    );
+export default function AddInput({ classes }: AddInputProps): JSX.Element {
+	if (!classes) {
+		classes = [];
+	}
+	return (
+		<ul className="add-input__list">
+			{classes.map((item) => (
+				<li className="add-input__li">
+					<img src="img/icon-left.svg" alt="" />
+					<input type="text" placeholder="new class" value={item} />
+					<img src="img/Minus.svg" alt="" />
+				</li>
+			))}
+		</ul>
+	);
 }

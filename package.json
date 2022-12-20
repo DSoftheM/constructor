@@ -28,7 +28,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"json": "json-server .\\src\\db\\styles.json --port 3002",
+		"json": "json-server .\\src\\db\\styles.json --port 3002 --watch",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",

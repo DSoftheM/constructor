@@ -2,11 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
 interface IStyleState {
-	data: NodeDTO[];
+	data: NodeDTO | null;
 }
 
 const initialState: IStyleState = {
-	data: [],
+	data: null,
 };
 
 export const styleSlice = createSlice({
@@ -14,7 +14,7 @@ export const styleSlice = createSlice({
 	name: "styleSlice",
 	reducers: {
 		addData(state: IStyleState, action: PayloadAction<NodeDTO>) {
-			state.data.push(action.payload);
+			state.data = action.payload;
 		},
 	},
 });
@@ -23,7 +23,7 @@ export function dataSelect(state: RootState) {
 	return state.treeReducer.activeTreeItemId;
 }
 
-type ElementNodeDTO = {
+export type ElementNodeDTO = {
 	tag: string;
 	classList: string[];
 	idList: string[];
