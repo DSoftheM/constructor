@@ -7,46 +7,44 @@ import OnceToolItem from "./ToolItem/OnceToolItem";
 import ToolItem from "./ToolItem/ToolItem";
 
 interface ToolsProps {
-    tools: ITool[];
+	tools: ITool[];
 }
 
 export default function Tools({ tools }: ToolsProps) {
-    const activeTool: number = useAppSelector((state) => state.toolsReducer.activeTool);
-    const dispatch = useAppDispatch();
+	const activeTool: number = useAppSelector((state) => state.toolsReducer.activeTool);
+	const dispatch = useAppDispatch();
 
-    const handleClickOnSubmenu = (id: number) => {
-        dispatch(toolsSlice.actions.setActiveTool(id));
-    };
+	const handleClickOnSubmenu = (id: number) => {
+		dispatch(toolsSlice.actions.setActiveTool(id));
+	};
 
-    return (
-        <div className="tools">
-            <ul className="tools__items">
-                {tools.map(({ isOnce, id, imgPath, toolData, dropdownArrow }: ITool) => {
-                    if (isOnce) return (
-                        <OnceToolItem
-                            handleClickOnSubmenu={handleClickOnSubmenu}
-                            id={id}
-                            key={id}
-                            imgPath={imgPath}
-                            isActive={id === activeTool}
-                        />
-                    );
-                    return (
-                        <ToolItem
-                            key={id}
-                            isActive={id === activeTool}
-                            handleClickOnSubmenu={handleClickOnSubmenu}
-                            id={id}
-                        >
-                            <ImgDropdown
-                                titleImg={imgPath}
-                                toolData={toolData}
-                                dropdownArrow={dropdownArrow}
-                            />
-                        </ToolItem>
-                    );
-                })}
-            </ul>
-        </div>
-    );
-};
+	return (
+		<div className="tools">
+			<ul className="tools__items">
+				{tools.map(({ isOnce, id, imgPath, toolData, dropdownArrow }: ITool) => {
+					if (isOnce)
+						return (
+							<OnceToolItem
+								handleClickOnSubmenu={handleClickOnSubmenu}
+								id={id}
+								key={id}
+								imgPath={imgPath}
+								isActive={id === activeTool}
+							/>
+						);
+					return (
+						<ToolItem
+							key={id}
+							isActive={id === activeTool}
+							handleClickOnSubmenu={handleClickOnSubmenu}
+							id={id}
+						>
+							<ImgDropdown titleImg={imgPath} toolData={toolData} dropdownArrow={dropdownArrow} />
+						</ToolItem>
+					);
+				})}
+			</ul>
+			<button className="button-export">Экспорт</button>
+		</div>
+	);
+}
